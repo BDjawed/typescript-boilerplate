@@ -39,5 +39,5 @@ module.exports = {
 		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 		"@typescript-eslint/no-use-before-define": "error",
 	},
-	ignorePatterns: ["./dist", "./node_modules", "./pnpm-lock.yaml"],
+	ignorePatterns: ["./dist", "./node_modules", "./*.yaml"],
 };
