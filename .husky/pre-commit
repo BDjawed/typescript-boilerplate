@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "${0%/*}/_/husky.sh"
+
+echo "Runnig linting and fix..."
+
+npm run lint-staged
