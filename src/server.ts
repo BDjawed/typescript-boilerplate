@@ -1,7 +1,7 @@
-import { config } from 'dotenv';
+import { config } from "dotenv";
 
 config();
 
-const hello = process.env['HELLO'];
+const hello = process.env["HELLO"];
 
 console.log(hello);

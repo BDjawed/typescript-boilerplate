@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "name": "fastify-ts-boilerplate",
+  "name": "typescript-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,17 +8,18 @@
   "scripts": {
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,mjs,cjs}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,mjs,cjs}\"",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\" --config ./.prettierrc.json",
+    "format": "prettier --write \"src/**/*.{js,cjs,ts,tsx,css,md}\" --config ./.prettierrc.json",
     "build": "tsc",
     "dev": "tsx watch src/server.ts | pino-pretty --colorize --trace-warnings ",
     "start": "npm run build && node dist/index.js",
     "clean": "rimraf dist/*",
     "prepare:husky": "husky install",
-    "lint-staged": "lint-staged" 
+    "lint-staged": "lint-staged",
+    "prepare": "husky"
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\" --config ./.prettierrc.json",
+      "prettier --write \"src/**/*.{js,cjs,jsx,ts,tsx,css,md}\" --config ./.prettierrc.json",
       "eslint --max-warnings 0 ."
     ]
   },
@@ -31,6 +32,7 @@
     "@typescript-eslint/parser": "^6.19.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",
     "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
