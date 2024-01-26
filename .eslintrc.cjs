@@ -26,8 +26,7 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: "latest",
 		sourceType: "module",
-		project: "./tsconfig.json",
-		extraFileExtensions: [".json", ".yaml"],
+		project: ["./tsconfig.json"],
 	},
 	plugins: ["@typescript-eslint"],
 	rules: {
@@ -39,5 +38,13 @@ module.exports = {
 		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 		"@typescript-eslint/no-use-before-define": "error",
 	},
-	ignorePatterns: ["./dist", "./node_modules", "./*.yaml"],
+	ignorePatterns: [
+		"./dist",
+		"./node_modules",
+		"./*.yaml",
+		"./package.json",
+		"./.prettierrc.json",
+		"./.eslintrc.cjs",
+		"./tsconfig.json",
+	],
 };
