@@ -18,9 +18,10 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{ts,js}": [
+    "*.{js,cjs,jsx,ts,tsx,mjs,cjs,ejs}": [
       "prettier --write \"src/**/*.{js,cjs,jsx,ts,tsx,css,md}\" --config ./.prettierrc.json",
-      "eslint --max-warnings 0 ."
+      "eslint --max-warnings 0 .",
+      "npm run lint:fix"
     ]
   },
   "keywords": [],

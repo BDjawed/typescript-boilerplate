@@ -4,12 +4,13 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
+	root: true,
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"prettier",
 		"plugin:prettier/recommended",
 		"plugin:import/recommended",
+		"prettier",
 	],
 	overrides: [
 		{
