@@ -15,7 +15,8 @@
     "clean": "rimraf dist/*",
     "prepare:husky": "husky install",
     "lint-staged": "lint-staged",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "commit"
   },
   "lint-staged": {
     "*.{js,cjs,jsx,ts,tsx,mjs,cjs,ejs}": [
@@ -28,6 +29,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
+    "@commitlint/prompt-cli": "^18.6.0",
+    "@commitlint/types": "^18.6.0",
     "@types/node": "^20.11.6",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",

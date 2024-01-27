@@ -47,5 +47,6 @@ module.exports = {
 		"./.prettierrc.json",
 		"./.eslintrc.cjs",
 		"./tsconfig.json",
+		"./commitlint.config.ts",
 	],
 };

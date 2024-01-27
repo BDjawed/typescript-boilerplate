@@ -113,7 +113,8 @@
   ],
   "include": [
     "./src/**/*.ts",
-    ".eslintrc.cjs"
+    ".eslintrc.cjs",
+    "./commitlint.config.ts",
   ],
   "watchOptions": {
     "excludeDirectories": ["./node_modules", "./dist"],
