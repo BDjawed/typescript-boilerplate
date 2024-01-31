@@ -1,0 +1,9 @@
+.pnpm-store
+.vscode
+dist
+node_modules
+.dockerignore
+docker-compose.yml
+Dockerfile
+commitlint.config.ts
+pnpm-lock.yaml

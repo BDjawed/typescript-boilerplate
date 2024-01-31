@@ -2,17 +2,18 @@
 	"$schema": "https://json.schemastore.org/tsconfig",
 	"name": "typescript-boilerplate",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Node TS Starter kit with Pnpm",
+	"github": "https://github.com/BDjawed/typescript-boilerplate",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
 		"lint": "eslint \"src/**/*.{js,jsx,ts,tsx,mjs,cjs}\"",
 		"lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx,mjs,cjs}\"",
 		"format": "prettier --write \"src/**/*.{js,cjs,ts,tsx,css,md}\" --config ./.prettierrc.json",
-		"build": "tsc",
-		"dev": "tsx watch src/server.ts | pino-pretty --colorize --trace-warnings ",
-		"start": "npm run build && node dist/index.js",
-		"clean": "rimraf dist/*",
+		"build": "pnpm run clean && tsc --build --verbose",
+		"dev": "tsx watch \"src/index.ts\" | pino-pretty --colorize --trace-warnings ",
+		"start": "pnpm run build && node dist/src/index.js",
+		"clean": "rimraf \"dist/\"",
 		"prepare:husky": "husky install",
 		"lint-staged": "lint-staged",
 		"prepare": "husky",
@@ -22,11 +23,11 @@
 		"*.{js,cjs,jsx,ts,tsx,mjs,cjs,ejs}": [
 			"prettier --write \"src/**/*.{js,cjs,jsx,ts,tsx,css,md}\" --config ./.prettierrc.json",
 			"eslint --max-warnings 0 .",
-			"npm run lint:fix"
+			"pnpm run lint:fix"
 		]
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Djawed Boutiba <djawed.boutiba@gmail.com>",
 	"license": "ISC",
 	"devDependencies": {
 		"@commitlint/cli": "^18.6.0",
@@ -57,6 +58,8 @@
 		"commitizen": {
 			"path": "@commitlint/cz-commitlint"
 		}
+	},
+	"volta": {
+		"node": "20.11.0"
 	}
 }
-

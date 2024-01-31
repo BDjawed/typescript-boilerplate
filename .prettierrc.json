@@ -6,5 +6,6 @@
     "printWidth": 80,
     "bracketSpacing": true,
     "useTabs": true,
-    "endOfLine": "crlf"
+    "endOfLine": "auto",
+    "parser":"typescript"
 }
