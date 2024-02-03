@@ -116,7 +116,8 @@
     "src/**/*.ts",
     ".eslintrc.cjs",
     "commitlint.config.ts",
-    "*.ts"
+    "*.ts",
+    "tests"
   ],
   "watchOptions": {
     "excludeDirectories": ["./node_modules", "./dist"],

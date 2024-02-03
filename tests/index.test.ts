@@ -3,7 +3,7 @@ config();
 
 import { describe, it, expect } from "vitest";
 
-import { hello } from "../../src/index";
+import { hello } from "../src/index";
 
 describe("hello world test", () => {
 	it("Should pass the .env variables", () => {
