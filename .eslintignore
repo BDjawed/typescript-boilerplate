@@ -1,0 +1,6 @@
+/dist/**/*
+/node_modules
+./*.yaml
+./package.json
+./.prettierrc.json
+/coverage/**/*

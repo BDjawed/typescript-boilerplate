@@ -1,6 +1,18 @@
 import { config } from "dotenv";
 config();
-const hello = process.env["HELLO"];
-console.log(hello);
-console.log(process.env["HOST"]);
-console.log(process.env["PORT"]);
+
+import { z } from "zod";
+import { parse } from "@zodyac/env";
+
+const EnvSchema = z.object({
+	HELLO: z.string(),
+	HOST: z.string(),
+	PORT: z.string(),
+});
+
+const env = parse(EnvSchema, {
+	path: ".env",
+	ignoreProcessEnv: true,
+});
+
+console.log(env);

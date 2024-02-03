@@ -39,12 +39,11 @@ module.exports = {
 		"@typescript-eslint/consistent-type-definitions": ["error", "type"],
 		"@typescript-eslint/no-use-before-define": "error",
 	},
-	ignorePatterns: [
-		"dist/src/**/*",
-		"node_modules",
-		"*.yaml",
-		"package.json",
-		".prettierrc.json",
-		"coverage/**/*",
-	],
+	settings: {
+		"import/resolver": {
+			node: {
+				extensions: [".vue", ".js", ".jsx", ".cjs", ".mjs", ".d.ts", ".ts"],
+			},
+		},
+	},
 };
