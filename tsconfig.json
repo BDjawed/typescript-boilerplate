@@ -108,13 +108,15 @@
     "pretty": true,                                      /* Enable error messages in pretty format. */
   },
   "exclude": [
-    "./node_modules/**",
-    "./dist/**/*",
+    "node_modules/**",
+    "dist/**/*",
+    "coverage/**/*",
   ],
   "include": [
     "src/**/*.ts",
     ".eslintrc.cjs",
     "commitlint.config.ts",
+    "*.ts"
   ],
   "watchOptions": {
     "excludeDirectories": ["./node_modules", "./dist"],

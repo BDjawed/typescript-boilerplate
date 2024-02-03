@@ -17,7 +17,8 @@
 		"prepare:husky": "husky install",
 		"lint-staged": "lint-staged",
 		"prepare": "husky",
-		"commit": "cz"
+		"commit": "cz",
+		"test": "vitest --coverage --run"
 	},
 	"lint-staged": {
 		"*.{js,cjs,jsx,ts,tsx,mjs,cjs,ejs}": [
@@ -38,6 +39,7 @@
 		"@types/node": "^20.11.6",
 		"@typescript-eslint/eslint-plugin": "^6.19.1",
 		"@typescript-eslint/parser": "^6.19.1",
+		"@vitest/coverage-v8": "^1.2.2",
 		"commitizen": "^4.3.0",
 		"cz-conventional-changelog": "^3.3.0",
 		"eslint": "^8.56.0",
@@ -49,10 +51,12 @@
 		"prettier": "^3.2.4",
 		"rimraf": "^5.0.5",
 		"tsx": "^4.7.0",
-		"typescript": "^5.3.3"
+		"typescript": "^5.3.3",
+		"vitest": "^1.2.2"
 	},
 	"dependencies": {
-		"dotenv": "^16.4.1"
+		"dotenv": "^16.4.1",
+		"zod": "^3.22.4"
 	},
 	"config": {
 		"commitizen": {

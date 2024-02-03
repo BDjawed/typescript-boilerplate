@@ -41,12 +41,10 @@ module.exports = {
 	},
 	ignorePatterns: [
 		"dist/src/**/*",
-		"./node_modules",
-		"./*.yaml",
-		"./package.json",
-		"./.prettierrc.json",
-		"./.eslintrc.cjs",
-		"./tsconfig.json",
-		"./commitlint.config.ts",
+		"node_modules",
+		"*.yaml",
+		"package.json",
+		".prettierrc.json",
+		"coverage/**/*",
 	],
 };
