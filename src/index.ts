@@ -10,9 +10,9 @@ const EnvSchema = z.object({
 	PORT: z.string(),
 });
 
-const env = parse(EnvSchema, {
+export const hello = parse(EnvSchema, {
 	path: ".env",
 	ignoreProcessEnv: true,
 });
 
-console.log(env);
+console.log(hello);

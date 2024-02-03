@@ -1,9 +1,12 @@
-import { describe, it, expect } from "vitest";
 import { config } from "dotenv";
 config();
 
-describe("hello work test", () => {
-	it("Should fetch .env variables", () => {
+import { describe, it, expect } from "vitest";
+
+import { hello } from "../../src/index";
+
+describe("hello world test", () => {
+	it("Should pass the .env variables", () => {
 		const envVar = {
 			host: process.env["HOST"],
 			port: process.env["PORT"],
@@ -16,8 +19,8 @@ describe("hello work test", () => {
 		});
 	});
 
-	it("should pass the hello work test", () => {
-		const result = "hello work";
-		expect(result).toBe("hello work");
+	it("Should pass the hello world test", () => {
+		const expected = { HELLO: "Hello World!", HOST: "0.0.0.0", PORT: "3000" };
+		expect(hello).toStrictEqual(expected);
 	});
 });
